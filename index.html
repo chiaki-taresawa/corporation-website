@@ -27,12 +27,11 @@
 
     <meta property="og:image" content="画像のURL" />
 
-    <!-- Add the slick-theme.css if you want default styling -->
-      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <!-- Add the slick-theme.css if you want default styling -->
-      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- slickの読み込み -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 
-  </head>
+    </head>
 
   <body>
     <header>
@@ -79,14 +78,23 @@
         <!--カルーセル-->
         <section id="carousel-section">
           <div class="carousel">
+
             <div>
-              <img class="carouselImg" src="images/carousel1.png">
+              <a href="index.html">
+               <img class="carouselImg" src="images/carousel1.png">
+              </a>
             </div>
+
             <div>
-              <img class="carouselImg" src="images/carousel2.png">
+              <a href="mission.html">
+                <img class="carouselImg" src="images/carousel2.png">
+              </a>
             </div>
+
             <div>
-              <img class="carouselImg" src="images/carousel3.png">
+              <a href="product.html">
+                <img class="carouselImg" src="images/carousel3.png">
+              </a>
             </div>
           </div>
         </section>
@@ -317,55 +325,61 @@
         <section id="contact">
           <h2 class="index-h2">CONTACT</h2>
           <h3>お問い合わせ</h3>
-              <form action="https://api.staticforms.xyz/submit" method="post">
-              <input type="text name=honeypot" style="display: none">
-              <!--STATIC FORMSアクセスキー-->
-              <input type="hidden" name="accessKey" value="5afe034f-7a07-4edf-87a6-38c23235cd0d">
-              <!--メールのタイトル-->
-              <input type="hidden" name="subject" value="お問い合わせフォーム"/>
-              <!--送信先のメールアドレスをvalueに設定-->
-              <input type="hidden" name="replyTo" value="www.taretare.com@gmail.com">
-              <input type="hidden" name="redirectTo" value="">
+          <form id="form">
+                <input type="text" name="honeypot" style="display: none">
+                <!--STATIC FORMSアクセスキー-->
+                <input type="hidden" name="accessKey" value="5afe034f-7a07-4edf-87a6-38c23235cd0d">
+                <!--メールのタイトル-->
+                <input type="hidden" name="subject" value="お問い合わせフォーム"/>
+                <!--送信先のメールアドレスをvalueに設定-->
+                <input type="hidden" name="replyTo" value="www.taretare.com@gmail.com">
+                <input type="hidden" name="redirectTo" value="">
+
             <div>
               <div class="contact-heading">
                 <label class="contact-label">お名前<span class="contact-span">必須</span></label>
               </div>
               <div class="contact-form">
-                <input typr="text" name="name" placeholder="入力してください" class="contact-textbox">
+                <input id="name" type="text" name="name" placeholder="入力してください" class="contact-textbox">
               </div>
             </div>
+
             <div>
                <div class="contact-heading">
                  <label class="contact-label">フリガナ<span class="contact-span">必須</span></label>
                </div>
                <div>
-                  <input type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
+                  <input id="furigana" type="text" name="hurigana" placeholder="入力してください" class="contact-textbox">
                </div>
             </div>
+
             <div>
               <div class="contact-heading">
                 <label class="contact-label">メールアドレス<span class="contact-span">必須</span></label>
               </div>
               <div>
-                <input type="text" name="email" placeholder="入力しください" class="contact-textbox">
+                <input id="email" type="text" name="email" placeholder="入力しください" class="contact-textbox">
               </div>
             </div>
+
             <div>
               <div class="contact-heading">
                 <label class="contact-label">電話番号</label>
               </div>
               <div>
-                <input typr="text" name="tel" placeholder="入力してください" class="contact-textbox">
+                <input id="tel" type="text" name="tel" placeholder="入力してください" class="contact-textbox">
               </div>
             </div>
+
             <div>
               <div class="contact-heading">
                <label class="contact-label">お問い合わせ内容<span class="contact-span">必須</span> </label>
               </div>
               <div>
-                <textarea class="contact-textarea" placeholder="入力してください" name="message"></textarea>
+                <textarea id="message" class="contact-textarea" placeholder="入力してください" name="message"></textarea>
               </div>
             </div>
+
             <div>
               <div class="contact-heading">
                 <label class="contact-label">ご希望の連絡先<span class="contact-span">必須</span> </label>
@@ -376,6 +390,7 @@
                 <input class="radiobutton" type="radio" value="both" name="contact"><label>どちらでも</label>
               </div>
             </div>
+
             <div>
               <div class="contact-heading">
                 <label class="contact-label">個人情報の取り扱い</label>
@@ -412,11 +427,14 @@
                    お客様がご自身の個人情報を弊社に提供されるか否かは、お客様のご判断によりますが、もしご提供されない場合には、適切なサービスが提供できない場合がありますので予めご了承ください。
                   </div>
                 </details>
-                <input type="checkbox" name="agree">
+
+                <input id="agree" type="checkbox" name="agree">
                 <span>個人情報の取り扱いについてご同意いただける場合は、チェックをしてください</span>
               </div>
             </div>
-            <input type="image" src="images/button-submit.png" alt="送信する">
+
+            <input id="submit" type="image" src="images/button-submit.png" alt="送信する">
+
           </form>
         </section>
       </article>
@@ -448,8 +466,9 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
-    <!--Jquery_SlickのURL-->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   <!-- slickの読み込み -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
   </body>
 </html>
