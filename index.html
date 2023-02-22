@@ -7,11 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <!--altが設定されていない画像に赤枠をつけるコード。本来は不要。最終チェックの時に便利-->
-    <style>
+    <!-- <style>
       img:not([alt]) {
         border: 10px solid red;
       }
-    </style>
+    </style>  -->
+
+    <!--Twitterカード。TwitterにHPをリンクさせ、表示させる-->
+    <!--Summary Card（サマリーカード）を表示したい場合は"summary"、Summary Card with Large Image（大型画像付きサマリーカード）を表示したい場合は"summary_large_image"を指定します。-->
+    <meta name="twitter:card" content="Twitterカードの種類" />
+
+    <meta name="twitter:site" content="Twitterのユーザー名" />
+
+    <meta property="og:url" content="ページのURL" />
+
+    <meta property="og:title" content="ページのタイトル" />
+
+    <meta property="og:description" content="ページの説明文" />
+
+    <meta property="og:image" content="画像のURL" />
+
+    <!-- Add the slick-theme.css if you want default styling -->
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
   </head>
 
   <body>
@@ -24,7 +44,7 @@
         <a href="mission.html">MISSION</a>
         <a href="product.html">PRODUCT</a>
         <a href="index.html#aboutus">ABOUT US</a>
-        <a href="index#vision">VISION</a>
+        <a href="index.html#vision">VISION</a>
         <a href="index.html#contact">CONTACT</a>
       </nav>
       <!--スマホ用メニューボタン-->
@@ -56,13 +76,19 @@
 
     <main>
       <article>
-        <!--メインビジュアル-->
-        <section id="main-visual">
-          <div id="main-message">
-            <h1>WORLD PEACE</h1>
-            <p>IT教育で世界平和を実現する</p>
+        <!--カルーセル-->
+        <section id="carousel-section">
+          <div class="carousel">
+            <div>
+              <img class="carouselImg" src="images/carousel1.png">
+            </div>
+            <div>
+              <img class="carouselImg" src="images/carousel2.png">
+            </div>
+            <div>
+              <img class="carouselImg" src="images/carousel3.png">
+            </div>
           </div>
-          <img src="images/index/index-main.png" alt="PCの周りに集まる多国籍の仲間たち">
         </section>
 
         <!--ミッション-->
@@ -79,7 +105,7 @@
               <h3>S2DGsの実現</h3>
               <p>国連が掲げる国連が掲げる「Sustainable Development Goals（持続可能な開発目標）」に含まれる17つのグローバル目標のうち、以下の5つの目標の実現をミッションとしてサービスを展開しています。</p>
               <a href="mission.html">
-                <img src="images/button-more.png" alt="もっと見る"></a>
+                <img class="button-more" src="images/button-more.png" alt="もっと見る"> </a>
             </div>
           </div>
         </section>
@@ -128,7 +154,7 @@
         
           <div>
             <a id="product-more" href="product.html">
-              <img src="images/button-more.png" alt="もっと見る">
+              <img class="button-more" src="images/button-more.png" alt="もっと見る">
             </a>
           </div>
         </section>
@@ -418,5 +444,12 @@
         </div>
       </footer>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <!--Jquery_SlickのURL-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   </body>
 </html>

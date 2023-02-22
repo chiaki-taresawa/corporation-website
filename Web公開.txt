@@ -1,0 +1,11 @@
+https://github.com/chiaki-taresawa/socialtech.git
+
+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
+
+http://chiaki-taresawa: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@github.com/chiaki-taresawa/socialtech.git
+
+
+
+https://github.com/chiaki-taresawa/socialtech-html.git
+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
+http://chiaki-taresawa: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@github.com/chiaki-taresawa/socialtech-html.git
